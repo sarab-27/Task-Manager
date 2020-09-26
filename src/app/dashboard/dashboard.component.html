@@ -1,0 +1,51 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-4">
+        <table style="width: 100%;border: 1px solid black;">
+            <thead>
+               <tr style="width: 100% !important;">
+                  <th>Pending Task</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr style="width: 100% !important;" *ngFor="let item of InfoArray">
+                  <td style="width: 33%" *ngIf="item.status == 'Pending'">Task:-{{item.task}} &nbsp; Description:- {{item.description}} &nbsp; Priority:-{{item.priority}} <i class="fa fa-trash" aria-hidden="true"></i>
+                     <i class="fa fa-pencil"></i></td>
+               </tr>
+            </tbody>
+         </table>
+    </div>
+    <div class="col-sm-4">
+        <table style="width: 100%;border: 1px solid black;">
+            <thead>
+               <tr style="width: 100% !important;">
+                  <th>InProgress Task</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr style="width: 100% !important;" *ngFor="let item of InfoArray">
+                  <td *ngIf="item.status == 'InProgress'">Task:-{{item.task}} &nbsp; Description:- {{item.description}} &nbsp; Priority:-{{item.priority}} <i class="fa fa-trash" aria-hidden="true"></i>
+                     <i class="fa fa-pencil"></i></td>
+               </tr>
+            </tbody>
+         </table>
+    </div>
+    <div class="col-sm-4">
+        <table style="width: 100%;border: 1px solid black;">
+            <thead>
+               <tr style="width: 100% !important;">
+                  <th>Completed Task</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr style="width: 100% !important;" *ngFor="let item of InfoArray">
+                  <td *ngIf="item.status == 'Completed'">Task:-{{item.task}} &nbsp; Description:- {{item.description}} &nbsp; Priority:-{{item.priority}} <i class="fa fa-trash" aria-hidden="true"></i>
+                    <i class="fa fa-pencil"></i></td>
+               </tr>
+            </tbody>
+         </table>
+    </div>
+</div>
+</div>
+
+
